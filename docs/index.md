@@ -4,7 +4,9 @@
 
 GasFree aims to provide users with a TRC-20/ERC-20 transfer solution that does not require a native token to pay for transaction gas fees. It specifically includes four roles: GasFree accounts, Service-Providers, wallets, and users, as shown in Figure 1. below.
 
-![overview](https://raw.githubusercontent.com/gasfreeio/developer-docs/main/images/overview.jpg)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/gasfreeio/developer-docs/main/images/overview.jpg" alt="GasFree Framework" width="460" height="368">
+</p>
 
 <div align="center">Figure 1. GasFree Framework</div>
 
@@ -44,9 +46,9 @@ Integrating GasFree into the wallet involves processes such as constructing tran
 
   - After receiving the GasFree transfer authorization submitted by the user, the provider will conduct a verification and immediately return the verification result to the wallet. The wallet should handle the response from the Provider:
 
-  - If successful, notify the user the authorization verification has passed, and include a globally unique authorization **traceId**. Subsequently, the on-chain status of this authorization can be tracked based on this **traceId**.
+    1. If successful, notify the user the authorization verification has passed, and include a globally unique authorization **traceId**. Subsequently, the on-chain status of this authorization can be tracked based on this **traceId**.
 
-  - If failed, notify the user of the failure, stating that the authorization has been discarded and this request will not trigger an actual transaction on the blockchain.
+    2. If failed, notify the user of the failure, stating that the authorization has been discarded and this request will not trigger an actual transaction on the blockchain.
 
   **6. Monitoring of the transfer authorization**:
 
@@ -458,25 +460,25 @@ Initiate a GasFree transfer authorization.
 Field description:
 
 - id: traceId of GasFree transfer authorization, not the transactionId
-- accountAddress: user's EOA address
-- gasFreeAddress: user's GasFree account address
-- providerAddress: address of the service-provider
-- targetAddress: recipient address
-- tokenAddress: contract address of the transferred token
-- amount: amount of the transfer
-- maxFee: limit of maximum fee
-- signature: user's signature
-- version: signature version of transfer authorization
-- nonce: nonce value specified for the transfer
-- expiredAt: expiration time of this transfer
-- state: current state of this transfer, with the following values:
-  - WAITING, // Not started
-  - INPROGRESS, // In progress
-  - CONFIRMING, // Confirming
-  - SUCCEED, // Successful
-  - FAILED, // Failed
-- estimatedActivateFee: estimated activation fee of the address
-- estimatedTransferFee: estimated transfer fee
+  - accountAddress: user's EOA address
+  - gasFreeAddress: user's GasFree account address
+  - providerAddress: address of the service-provider
+  - targetAddress: recipient address
+  - tokenAddress: contract address of the transferred token
+  - amount: amount of the transfer
+  - maxFee: limit of maximum fee
+  - signature: user's signature
+  - version: signature version of transfer authorization
+  - nonce: nonce value specified for the transfer
+  - expiredAt: expiration time of this transfer
+  - state: current state of this transfer, with the following values:
+    - WAITING, // Not started
+    - INPROGRESS, // In progress
+    - CONFIRMING, // Confirming
+    - SUCCEED, // Successful
+    - FAILED, // Failed
+  - estimatedActivateFee: estimated activation fee of the address
+  - estimatedTransferFee: estimated transfer fee
 
 **Return example:**
 
