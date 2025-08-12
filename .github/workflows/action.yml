@@ -33,7 +33,7 @@ jobs:
               run: mkdocs build
 
             - name: Add CNAME file
-             run: echo 'docs.gasfree.io' > site/CNAME
+              run: echo 'docs.gasfree.io' > site/CNAME
 
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@v4
