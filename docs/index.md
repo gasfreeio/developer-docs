@@ -152,7 +152,7 @@ Wallets/users can interact with the Provider through the following endpoint, inc
 
 | Services          | TRON \- Mainnet                                                | TRON \- Nile testnet                                                     |
 | :---------------- | :------------------------------------------------------------- | :----------------------------------------------------------------------- |
-| provider-\#1      | [https://open.gasfree.io/tron/](https://open.gasfree.io/tron/) | [https://open-test.gasfree.io/nile/](https://open-test.gasfree.io/nile/) |
+| Provider interface call prefix <br/> (the specific API endpoint must follow)| [https://open.gasfree.io/tron/](https://open.gasfree.io/tron/) | [https://open-test.gasfree.io/nile/](https://open-test.gasfree.io/nile/) |
 | GasFree website   | [https://gasfree.io](https://gasfree.io)                       | [https://test.gasfree.io](https://test.gasfree.io)                       |
 | Assets Withdrawal | [https://gasfree.io/withdraw](https://gasfree.io/withdraw)     | [https://test.gasfree.io/withdraw](https://test.gasfree.io/withdraw)     |
 
@@ -226,7 +226,7 @@ signature = base64.b64encode(
         ).digest()
     ).decode('utf-8')
 
-url = 'https://test-nile.gasfree.io' + path
+url = 'https://open-test.gasfree.io' + path
 headers = {
     'Timestamp': f'{timestamp}',
     'Authorization': f'ApiKey {API_KEY}:{signature}'
