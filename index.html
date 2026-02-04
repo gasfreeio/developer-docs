@@ -547,7 +547,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">provider-#1</td>
+<td style="text-align: left;">Provider interface call prefix <br/> (the specific API endpoint must follow)</td>
 <td style="text-align: left;"><a href="https://open.gasfree.io/tron/">https://open.gasfree.io/tron/</a></td>
 <td style="text-align: left;"><a href="https://open-test.gasfree.io/nile/">https://open-test.gasfree.io/nile/</a></td>
 </tr>
@@ -614,7 +614,7 @@
         <span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">()</span>
     <span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://test-nile.gasfree.io&#39;</span> <span class="o">+</span> <span class="n">path</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://open-test.gasfree.io&#39;</span> <span class="o">+</span> <span class="n">path</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;Timestamp&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
     <span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;ApiKey </span><span class="si">{</span><span class="n">API_KEY</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">signature</span><span class="si">}</span><span class="s1">&#39;</span>
