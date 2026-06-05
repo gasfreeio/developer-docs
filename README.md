@@ -14,5 +14,6 @@ To learn more, please visit [gasfree.io](https://gasfree.io/).
 - 📄 [Whitepaper](https://gasfree.io/gasfree_whitepaper_en.pdf)
 - 🧑‍💻 [Developer Center](https://developer.gasfree.io)
 - 💻 [gasfree-sdk-js](https://github.com/gasfreeio/gasfree-sdk-js)
-- ☕ [gasfree-sdk-java](https://github.com/gasfreeio/gasfree-sdk-java)
+- ☕  [gasfree-sdk-java](https://github.com/gasfreeio/gasfree-sdk-java)
 - 🍎 [gasfree-sdk-swift](https://github.com/gasfreeio/gasfree-sdk-swift)
+- 👨‍💻 [gasfree-sdk-flutter](https://github.com/weixuefeng/gasfree_sdk_flutter)
