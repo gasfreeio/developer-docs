@@ -174,6 +174,8 @@ Nile testnet faucet: [https://nileex.io/join/getJoinPage](https://nileex.io/join
 
 **2. It is recommended to conduct balance and status verification before submitting transfer authorization. For details, please refer to the definition of [GasFree account interface](#get-apiv1addressaccountaddress).**
 
+<span style="color: #d32f2f">**3. The GasFree addresses generated for the same address on the TRON mainnet and the TRON Nile testnet are different. DO NOT mix them up, as this may result in a loss of assets.**</span>
+
 **Unless otherwise specified, all references to asset balances and amounts in this document are in the smallest unit.**
 
 ## 5. APIs
