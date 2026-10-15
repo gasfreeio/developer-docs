@@ -437,7 +437,7 @@
 </ul>
 <p><strong>6. Monitoring of the transfer authorization</strong>:</p>
 <ul>
-<li>Call <a href="#get-apiv1gasfreetraceid">/api/v1/gasfree/{tranceId}</a> to query the status of the GasFree transfer authorization.</li>
+<li>Call <a href="#get-apiv1gasfreetraceid">/api/v1/gasfree/{traceId}</a> to query the status of the GasFree transfer authorization.</li>
 </ul>
 <h2 id="3-signature-algorithm-and-provider-endpoint">3. Signature Algorithm and Provider Endpoint<a class="headerlink" href="#3-signature-algorithm-and-provider-endpoint" title="Permanent link">&para;</a></h2>
 <h4 id="31-parameters">3.1 Parameters<a class="headerlink" href="#31-parameters" title="Permanent link">&para;</a></h4>
@@ -572,6 +572,7 @@
 <p><strong>The GasFree environment on the TRON testnet is only available for developer teams to conduct testing and debugging during integration.</strong></p>
 <p><strong>It is strongly recommended to close the entrance to the GasFree test environment for ordinary users after the official launch to prevent users from filling in the wrong recipient addresses and incurring asset losses.</strong></p>
 <p><strong>2. It is recommended to conduct balance and status verification before submitting transfer authorization. For details, please refer to the definition of <a href="#get-apiv1addressaccountaddress">GasFree account interface</a>.</strong></p>
+<p><span style="color: #d32f2f"><strong>3. The GasFree addresses generated for the same address on the TRON mainnet and the TRON Nile testnet are different. DO NOT mix them up, as this may result in a loss of assets.</strong></span></p>
 <p><strong>Unless otherwise specified, all references to asset balances and amounts in this document are in the smallest unit.</strong></p>
 <h2 id="5-apis">5. APIs<a class="headerlink" href="#5-apis" title="Permanent link">&para;</a></h2>
 <h3 id="api-authentication">API Authentication<a class="headerlink" href="#api-authentication" title="Permanent link">&para;</a></h3>
@@ -601,8 +602,8 @@
 
 <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;GET&#39;</span>
 
-<span class="o">//</span> <span class="n">If</span> <span class="n">running</span> <span class="ow">in</span> <span class="n">test</span> <span class="n">env</span><span class="p">(</span><span class="n">nile</span> <span class="n">testnet</span><span class="p">)</span><span class="err">，</span><span class="n">path</span> <span class="n">prefix</span> <span class="n">should</span> <span class="n">be</span> <span class="s1">&#39;/nile&#39;</span>
-<span class="o">//</span> <span class="n">If</span> <span class="n">running</span> <span class="ow">in</span> <span class="n">mainnet</span> <span class="p">(</span><span class="n">mainnet</span><span class="p">),</span> <span class="n">path</span> <span class="n">prefix</span> <span class="n">should</span> <span class="n">be</span> <span class="s1">&#39;/tron&#39;</span>
+<span class="c1"># If running in test env(nile testnet)，path prefix should be &#39;/nile&#39;</span>
+<span class="c1"># If running in mainnet (mainnet), path prefix should be &#39;/tron&#39;</span>
 <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/nile/api/v1/config/token/all&#39;</span>
 <span class="n">timestamp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
 <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">method</span><span class="si">}{</span><span class="n">path</span><span class="si">}{</span><span class="n">timestamp</span><span class="si">}</span><span class="s1">&#39;</span>
@@ -769,7 +770,7 @@
 <span class="w">    </span><span class="s2">&quot;gasFreeAddress&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;TLGVf7MRsLG7XxBkJKy8wnCVcDnAeXYNCb&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;active&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;nonce&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;allow_submit&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;allowSubmit&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;assets&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
 <span class="w">        </span><span class="s2">&quot;tokenAddress&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;TXYZopYRdj2D9XRtbG411XZZ3kM5VkAeBf&quot;</span><span class="p">,</span>
