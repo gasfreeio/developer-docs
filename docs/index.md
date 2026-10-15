@@ -52,7 +52,7 @@ Integrating GasFree into the wallet involves processes such as constructing tran
 
   **6. Monitoring of the transfer authorization**:
 
-  - Call [/api/v1/gasfree/{tranceId}](#get-apiv1gasfreetraceid) to query the status of the GasFree transfer authorization.
+  - Call [/api/v1/gasfree/{traceId}](#get-apiv1gasfreetraceid) to query the status of the GasFree transfer authorization.
 
 ## 3. Signature Algorithm and Provider Endpoint
 
@@ -174,6 +174,8 @@ Nile testnet faucet: [https://nileex.io/join/getJoinPage](https://nileex.io/join
 
 **2. It is recommended to conduct balance and status verification before submitting transfer authorization. For details, please refer to the definition of [GasFree account interface](#get-apiv1addressaccountaddress).**
 
+<span style="color: #d32f2f">**3. The GasFree addresses generated for the same address on the TRON mainnet and the TRON Nile testnet are different. DO NOT mix them up, as this may result in a loss of assets.**</span>
+
 **Unless otherwise specified, all references to asset balances and amounts in this document are in the smallest unit.**
 
 ## 5. APIs
@@ -213,8 +215,8 @@ API_SECRET = 'YOUR_API_SECRET'
 
 method = 'GET'
 
-// If running in test env(nile testnet)，path prefix should be '/nile'
-// If running in mainnet (mainnet), path prefix should be '/tron'
+# If running in test env(nile testnet)，path prefix should be '/nile'
+# If running in mainnet (mainnet), path prefix should be '/tron'
 path = '/nile/api/v1/config/token/all'
 timestamp = int(time.time())
 message = f'{method}{path}{timestamp}'
@@ -405,7 +407,7 @@ Field description:
     "gasFreeAddress": "TLGVf7MRsLG7XxBkJKy8wnCVcDnAeXYNCb",
     "active": true,
     "nonce": 1,
-    "allow_submit": false,
+    "allowSubmit": false,
     "assets": [
       {
         "tokenAddress": "TXYZopYRdj2D9XRtbG411XZZ3kM5VkAeBf",
